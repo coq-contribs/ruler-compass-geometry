@@ -47,7 +47,7 @@ Defined.
 
 Definition MidPoint (A B : Point) : A <> B -> Point.
 Proof.
-	intros A B H; destruct (ExistsMiddle A B H) as (I, _); exact I.
+	intros H; destruct (ExistsMiddle A B H) as (I, _); exact I.
 Defined.
 
 Lemma CollinearEquidistantBetween : forall A B I : Point,
