@@ -5,19 +5,19 @@ Section SUPERIMPOSED_EQUIVALENCE.
 Lemma SuperimposedRefl : forall F : Figure,
 	Superimposed F F.
 Proof.
-	intuition; canonize.
+	dintuition; canonize.
 Qed.
 
 Lemma SuperimposedSym : forall F1 F2 : Figure,
 	Superimposed F1 F2 -> Superimposed F2 F1.
 Proof.
-	intuition; canonize.
+	dintuition; canonize.
 Qed.
 
 Lemma SuperimposedTrans : forall F1 F2 F3 : Figure,
 	Superimposed F1 F2 -> Superimposed F2 F3 -> Superimposed F1 F3.
 Proof.
-	intuition; canonize.
+	dintuition; canonize.
 Qed.
 
 Lemma SuperimposedHalfLines : forall A B C : Point,

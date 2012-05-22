@@ -49,7 +49,7 @@ Ltac simplClockwise :=
 	unfold Between, EquiDirected, HalfLine, EquiOriented, HalfPlane, SubFigure, Included, In, Collinear in *.
 
 Ltac canonize := 
-	simplClockwise; intuition.
+	simplClockwise; dintuition.
 
 Ltac writeChangeSense :=
 	match goal with 
