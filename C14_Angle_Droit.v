@@ -1,5 +1,7 @@
 Require Export C13_Angles_Supplem.
 
+Unset Standard Proposition Elimination Names.
+
 Section RIGHTANGLE.
 
 Definition Vv : Point.
