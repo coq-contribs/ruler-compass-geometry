@@ -9,9 +9,9 @@ Proof.
 	intros.
 	assert (Hab := ClockwiseDistinctAB _ _ _ H).
 	assert (Hbc := ClockwiseDistinctBC _ _ _ H).
-	setCircle A B C Hbc ipattern:F1 ipattern:G1.
-	setCircle C A B Hab ipattern:F2 ipattern:G2.
-	setCinterclockC F1 F2 G1 G2 ipattern:D ipattern:H1 ipattern:H2 ipattern:H3 ipattern:H4.
+	setCircle A B C Hbc ipattern:(F1) ipattern:(G1).
+	setCircle C A B Hab ipattern:(F2) ipattern:(G2).
+	setCinterclockC F1 F2 G1 G2 ipattern:(D) ipattern:(H1) ipattern:(H2) ipattern:(H3) ipattern:(H4).
 	 rewrite (DistSym A C); apply TriangleSpecComm; try autoDistinct.
 	   apply ClockwiseTriangleSpec; autoClockwise.
 	 exists D; unfold Parallelogramm in |- *; intuition.

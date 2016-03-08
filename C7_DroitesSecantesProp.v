@@ -74,9 +74,9 @@ Lemma LinesIntersectionPoint : forall A B C D,
 	{I : Point | Collinear A B I /\ Collinear C D I}.
 Proof.
 	intros.
-	setLine A B (NotEquidirectedDistinctAB A B C D H) ipattern:F1 ipattern:L1.
-	setLine C D (NotEquidirectedDistinctCD A B C D H) ipattern:F2 ipattern:L2.
-	setLinterL F1 F2 L1 L2 ipattern:J ipattern:H2 ipattern:H3 ipattern:H4.
+	setLine A B (NotEquidirectedDistinctAB A B C D H) ipattern:(F1) ipattern:(L1).
+	setLine C D (NotEquidirectedDistinctCD A B C D H) ipattern:(F2) ipattern:(L2).
+	setLinterL F1 F2 L1 L2 ipattern:(J) ipattern:(H2) ipattern:(H3) ipattern:(H4).
 	 unfold SecantLines , F1, F2, L1, L2 in |- *; simpl in |- *; trivial.
 	 exists J; intuition.
 Qed.
@@ -92,9 +92,9 @@ Lemma UniqueIntersectionLines : forall A B C D I J : Point,
 	I = J.
 Proof.
 	intros.
-	setLine A B H ipattern:F1 ipattern:L1.
-	setLine C D H0 ipattern:F2 ipattern:L2.
-	setLinterL F1 F2 L1 L2 ipattern:E ipattern:H6 ipattern:H7 ipattern:H8.
+	setLine A B H ipattern:(F1) ipattern:(L1).
+	setLine C D H0 ipattern:(F2) ipattern:(L2).
+	setLinterL F1 F2 L1 L2 ipattern:(E) ipattern:(H6) ipattern:(H7) ipattern:(H8).
 	 trivial.
 	 unfold Unicity in *.
 	   rewrite <- (H8 I).

@@ -10,9 +10,9 @@ Lemma ExistsHalfLineEquidistant : forall A B C D : Point,
 		Distance A E = Distance C D}.
 Proof.
 	intros A B C D Hab Hcd.
-	setLine A B Hab ipattern:L ipattern:AB.
-	setCircle A C D Hcd ipattern:G ipattern:ACD.
-	setLinterposC L G AB ACD ipattern:E ipattern:H1 ipattern:H2 ipattern:H3 ipattern:H4.
+	setLine A B Hab ipattern:(L) ipattern:(AB).
+	setCircle A C D Hcd ipattern:(G) ipattern:(ACD).
+	setLinterposC L G AB ACD ipattern:(E) ipattern:(H1) ipattern:(H2) ipattern:(H3) ipattern:(H4).
 	 apply CollinearABA.
 	 exists E; canonize.
 Qed.
@@ -24,9 +24,9 @@ Lemma HalfLineEquidistantEqual : forall A B C : Point,
 	B = C.
 Proof.
 	intros.
-	setLine A B H ipattern:L ipattern:AB.
-	setCircle A A B H ipattern:G ipattern:Aab.
-	setLinterposC L G AB Aab ipattern:D ipattern:H2 ipattern:H3 ipattern:H4 ipattern:H5.
+	setLine A B H ipattern:(L) ipattern:(AB).
+	setCircle A A B H ipattern:(G) ipattern:(Aab).
+	setLinterposC L G AB Aab ipattern:(D) ipattern:(H2) ipattern:(H3) ipattern:(H4) ipattern:(H5).
 	 apply CollinearABA.
 	 rewrite <- (H5 B).
 	  apply H5.
@@ -47,9 +47,9 @@ Lemma ExistsBetweenEquidistant : forall A B C D : Point,
 		Distance A E = Distance C D}.
 Proof.
 	intros A B C D Hab Hcd.
-	setLine A B Hab ipattern:L ipattern:AB.
-	setCircle A C D Hcd ipattern:G ipattern:ACD.
-	setLinternegC L G AB ACD ipattern:E ipattern:H1 ipattern:H2 ipattern:H3 ipattern:H4.
+	setLine A B Hab ipattern:(L) ipattern:(AB).
+	setCircle A C D Hcd ipattern:(G) ipattern:(ACD).
+	setLinternegC L G AB ACD ipattern:(E) ipattern:(H1) ipattern:(H2) ipattern:(H3) ipattern:(H4).
 	 apply CollinearABA.
 	 exists E; canonize.
 	  destruct (ClockwiseExists B A (sym_not_eq Hab)) as (F, H5).
@@ -65,10 +65,10 @@ Lemma ExistsEquidistantBetween : forall A B C D : Point,
 		Distance B E = Distance C D}.
 Proof.
 	intros A B C D Hab Hcd.
-	setLine A B Hab ipattern:L ipattern:AB.
-	setCircle B C D Hcd ipattern:G ipattern:BCD.
-	setLinterposC L G AB BCD ipattern:E ipattern:H1 ipattern:H2 ipattern:H3
-	 ipattern:H4.
+	setLine A B Hab ipattern:(L) ipattern:(AB).
+	setCircle B C D Hcd ipattern:(G) ipattern:(BCD).
+	setLinterposC L G AB BCD ipattern:(E) ipattern:(H1) ipattern:(H2) ipattern:(H3)
+	 ipattern:(H4).
 	 apply CollinearABB.
 	 exists E; canonize.
 Qed.

@@ -19,9 +19,9 @@ Lemma Exists2AB : forall A B : Point,
 		Distance B C = Distance A B}.
 Proof.
 	intros A B Hab.
-	setLine A B Hab ipattern:L ipattern:AB.
-	setCircle B A B Hab ipattern:G ipattern:BAB.
-	setLinterposC L G AB BAB ipattern:C ipattern:H1 ipattern:H2 ipattern:H3 ipattern:H4.
+	setLine A B Hab ipattern:(L) ipattern:(AB).
+	setCircle B A B Hab ipattern:(G) ipattern:(BAB).
+	setLinterposC L G AB BAB ipattern:(C) ipattern:(H1) ipattern:(H2) ipattern:(H3) ipattern:(H4).
 	 apply CollinearABB.
 	 exists C; canonize.
 Qed.
@@ -51,10 +51,10 @@ Lemma EquilateralClockwise : forall A B : Point,
 	{C : Point | Equilateral A B C /\ Clockwise A B C}.
 Proof.
 	intros.
-	setCircle A A B H ipattern:C1 ipattern:H1.
-	setCircle B A B H ipattern:C2 ipattern:H2.
-	setCinterclockC C1 C2 H1 H2 ipattern:C ipattern:H3 ipattern:H4 ipattern:H5
-	 ipattern:H6; unfold C1, C2, H1, H2 in *; simpl in *.
+	setCircle A A B H ipattern:(C1) ipattern:(H1).
+	setCircle B A B H ipattern:(C2) ipattern:(H2).
+	setCinterclockC C1 C2 H1 H2 ipattern:(C) ipattern:(H3) ipattern:(H4) ipattern:(H5)
+	 ipattern:(H6); unfold C1, C2, H1, H2 in *; simpl in *.
 	 apply EquilateralSpec; auto.
 	 exists C; unfold Equilateral in |- *; intuition.
 Defined.

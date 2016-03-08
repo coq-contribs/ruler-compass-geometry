@@ -24,10 +24,10 @@ Lemma C1b : forall A B C D E F : Point,
 	E = F.
 Proof.
 	intros.
-	setLine C D H0 ipattern:L ipattern:CD.
-	setCircle C A B H ipattern:G ipattern:CAB.
-	setLinterposC L G CD CAB ipattern:J ipattern:H5 ipattern:H6 ipattern:H7
-	 ipattern:H8.
+	setLine C D H0 ipattern:(L) ipattern:(CD).
+	setCircle C A B H ipattern:(G) ipattern:(CAB).
+	setLinterposC L G CD CAB ipattern:(J) ipattern:(H5) ipattern:(H6) ipattern:(H7)
+	 ipattern:(H8).
 	 autoCollinear.
 	 apply trans_eq with (y := J).
 	  apply sym_eq; apply H8.

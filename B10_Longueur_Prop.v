@@ -268,10 +268,10 @@ Proof.
 	intros.
 	assert (Hab := ClockwiseDistinctAB A B C H).
 	assert (Hbc := ClockwiseDistinctBC A B C H).
-	setCircle A A B Hab ipattern:G1 ipattern:Aab.
-	setCircle C B C Hbc ipattern:G2 ipattern:Cbc.
-	setCinterantiC G1 G2 Aab Cbc ipattern:E ipattern:H3 ipattern:H4 ipattern:H5
-	 ipattern:H6.
+	setCircle A A B Hab ipattern:(G1) ipattern:(Aab).
+	setCircle C B C Hbc ipattern:(G2) ipattern:(Cbc).
+	setCinterantiC G1 G2 Aab Cbc ipattern:(E) ipattern:(H3) ipattern:(H4) ipattern:(H5)
+	 ipattern:(H6).
 	 rewrite (DistSym A C); apply ClockwiseTriangleSpec; apply ClockwiseCAB; auto.
 	 rewrite <- (H6 B).
 	  apply H6.
@@ -293,10 +293,10 @@ Proof.
 	intros.
 	assert (Hac := sym_not_eq (ClockwiseDistinctCA A B C H)).
 	assert (Hbc := ClockwiseDistinctBC A B C H).
-	setCircle A A C Hac ipattern:G1 ipattern:Aac.
-	setCircle B B C Hbc ipattern:G2 ipattern:Bbc.
-	setCinterantiC G2 G1 Bbc Aac ipattern:E ipattern:H3 ipattern:H4 ipattern:H5
-	 ipattern:H6.
+	setCircle A A C Hac ipattern:(G1) ipattern:(Aac).
+	setCircle B B C Hbc ipattern:(G2) ipattern:(Bbc).
+	setCinterantiC G2 G1 Bbc Aac ipattern:(E) ipattern:(H3) ipattern:(H4) ipattern:(H5)
+	 ipattern:(H6).
 	 rewrite (DistSym B A); rewrite (DistSym A C); apply ClockwiseTriangleSpec;
 	  auto.
 	 rewrite <- (H6 C).

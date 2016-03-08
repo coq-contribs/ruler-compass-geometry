@@ -226,9 +226,9 @@ Proof.
 	intros.
 	assert (H2 := ClockwiseDistinctAB _ _ _ H).
 	assert (H3 := ClockwiseDistinctBC _ _ _ H).
-	setLine A B H2 ipattern:AB ipattern:D1.
-	setLine B C H3 ipattern:BC ipattern:D2.
-	setLinterL AB BC D1 D2 ipattern:E ipattern:H4 ipattern:H5 ipattern:H6.
+	setLine A B H2 ipattern:(AB) ipattern:(D1).
+	setLine B C H3 ipattern:(BC) ipattern:(D2).
+	setLinterL AB BC D1 D2 ipattern:(E) ipattern:(H4) ipattern:(H5) ipattern:(H6).
 	 intro H4; elim (ClockwiseNotCollinear _ _ _ H).
 	   apply EquiDirectedCollinear; trivial.
 	 rewrite <- (H6 D); intuition.
