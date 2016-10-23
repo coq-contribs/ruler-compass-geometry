@@ -5,7 +5,7 @@ Email: Jean.Duprat@ens-lyon.fr
 Homepage:
 Institution: LIP, Ecole Normale Superieure de Lyon
 Address: 36, Allee d'Italie, 69365 Lyon Cedex 05
-Date: November 2007
+Date: 2007-11
 Description: This library contains an axiomatization of the ruler and 
 compass euclidian geometry. Files A1 to A6 contain the axioms and the 
 basic constructions. The other files build the proof that this 
