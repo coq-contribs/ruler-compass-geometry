@@ -193,7 +193,7 @@ Proof.
 	rewrite <- H6; auto.
 Qed.
 
-(* C5 : For any three angles ^A, ^B, ^C, if ^A = ^Bâ and ^A = ^C, then ^B = ^C. Every angle is congruent to itself. *)
+(* C5 : For any three angles ^A, ^B, ^C, if ^A = ^BÃ¢ and ^A = ^C, then ^B = ^C. Every angle is congruent to itself. *)
 
 Lemma C5a : forall A B C : Point,
 	Angle B A C = Angle B A C.
